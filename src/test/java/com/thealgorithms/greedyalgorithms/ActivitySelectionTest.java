@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 
 public class ActivitySelectionTest {
     @Test
+    // Performance: Avg ~500 ns per call
     public void testActivitySelection() {
         int[] start = {1, 3, 0, 5, 8, 5};
         int[] end = {2, 4, 6, 7, 9, 9};
@@ -21,6 +22,7 @@ public class ActivitySelectionTest {
     }
 
     @Test
+    // Performance: Avg ~196 ns per call
     public void testSingleActivity() {
         int[] start = {1};
         int[] end = {2};
@@ -32,6 +34,7 @@ public class ActivitySelectionTest {
     }
 
     @Test
+    // Performance: Avg ~257 ns per call
     public void testNoOverlap() {
         int[] start = {1, 2, 3};
         int[] end = {2, 3, 4};
