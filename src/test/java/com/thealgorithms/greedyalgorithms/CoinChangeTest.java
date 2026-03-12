@@ -10,6 +10,7 @@ import org.junit.jupiter.api.Test;
 
 public class CoinChangeTest {
     @Test
+    // Performance: Avg ~230 ns per call
     public void testCoinChangeProblemWithValidAmount() {
         ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(500, 50, 20, 20, 1));
         ArrayList<Integer> coins = CoinChange.coinChangeProblem(591);
@@ -17,6 +18,7 @@ public class CoinChangeTest {
     }
 
     @Test
+    // Performance: Avg ~113 ns per call
     public void testCoinChangeProblemWithLargeAmount() {
         List<Integer> expected = singletonList(2000);
         ArrayList<Integer> coins = CoinChange.coinChangeProblem(2000);
@@ -24,6 +26,7 @@ public class CoinChangeTest {
     }
 
     @Test
+    // Performance: Avg ~120 ns per call
     public void testCoinChangeProblemWithPartialCoins2() {
         ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(500, 50, 20));
         ArrayList<Integer> coins = CoinChange.coinChangeProblem(570);
@@ -31,6 +34,7 @@ public class CoinChangeTest {
     }
 
     @Test
+    // Performance: Avg ~117 ns per call
     public void testCoinChangeProblemWithSmallAmount() {
         ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(2, 1));
         ArrayList<Integer> coins = CoinChange.coinChangeProblem(3);
@@ -38,6 +42,7 @@ public class CoinChangeTest {
     }
 
     @Test
+    // Performance: Avg ~264 ns per call
     public void testCoinChangeProblemWithLargeAmountAndMultipleDenominations() {
         ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(2000, 2000, 2000, 2000, 500, 500, 500, 100, 100, 100, 100, 50, 20, 20, 5, 2, 2));
         ArrayList<Integer> coins = CoinChange.coinChangeProblem(9999);
@@ -45,6 +50,7 @@ public class CoinChangeTest {
     }
 
     @Test
+    // Performance: Avg ~194 ns per call
     public void testCoinChangeProblemWithAllDenominations() {
         ArrayList<Integer> expected = new ArrayList<>(Arrays.asList(2000, 500, 100, 100, 100, 50, 20, 10, 5, 2, 1));
         ArrayList<Integer> coins = CoinChange.coinChangeProblem(2888);
@@ -52,6 +58,7 @@ public class CoinChangeTest {
     }
 
     @Test
+    // Performance: Avg ~102 ns per call
     public void testCoinChangeProblemWithZeroAmount() {
         ArrayList<Integer> expected = new ArrayList<>();
         ArrayList<Integer> coins = CoinChange.coinChangeProblem(0);
